@@ -4,8 +4,8 @@ defmodule PayPal.Mixfile do
   def project do
     [
       app: :pay_pal,
-      version: "0.0.2",
-      elixir: "~> 1.4",
+      version: "0.0.3",
+      elixir: "~> 1.11",
       build_embedded: Application.get_env(:pay_pal, :environment) == :prod,
       start_permanent: Application.get_env(:pay_pal, :environment) == :prod,
       description: description(),
@@ -28,7 +28,7 @@ defmodule PayPal.Mixfile do
     [
       {:httpoison, "~> 0.13"},
       {:poison, "~> 3.1"},
-      {:oauth2, "~> 0.9"},
+      {:oauth2, "~> 2.0"},
       {:exvcr, "~> 0.8", only: [:dev, :test]},
       {:ex_doc, "~> 0.15", only: [:dev, :docs]},
       {:excoveralls, "~> 0.6", only: [:dev, :test]},
